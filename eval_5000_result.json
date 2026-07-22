@@ -1,0 +1,8 @@
+{
+  "controller": "continuous_lookup_noclip",
+  "n": 5000,
+  "lataccel_cost_mean": 0.030343581281987223,
+  "jerk_cost_mean": 5.363293093166279,
+  "total_cost_mean": 6.8804721572656415,
+  "wall_s": 65.3
+}
