@@ -17,7 +17,7 @@
 use md5::{Digest, Md5};
 use nalgebra::{DMatrix, DVector};
 use std::fs::File;
-use std::io::{BufReader, Read, Write};
+use std::io::{BufReader, Write};
 use std::path::Path;
 use std::sync::OnceLock;
 
@@ -387,10 +387,6 @@ pub fn list_csvs(data_dir: &Path) -> Result<Vec<std::path::PathBuf>, String> {
     paths.sort();
     Ok(paths)
 }
-
-// silence unused import warning for Read
-#[allow(dead_code)]
-fn _use_read(_: &dyn Read) {}
 
 #[cfg(test)]
 mod tests {
