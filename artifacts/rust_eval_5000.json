@@ -1,0 +1,14 @@
+{
+  "controller": "continuous_lookup_noclip",
+  "lookup_path": "artifacts/rust_continuous_noclip.npz",
+  "n": 5000,
+  "lataccel_cost_mean": 0.030343581281987223,
+  "jerk_cost_mean": 5.363293093166279,
+  "total_cost_mean": 6.8804721572656415,
+  "wall_s": 48.67780780792236,
+  "display_rule": "floor to 6 decimal places (never round): floor(x*1e6)/1e6",
+  "lataccel_cost_mean_floor6": 0.030343,
+  "jerk_cost_mean_floor6": 5.363293,
+  "total_cost_mean_floor6": 6.880472,
+  "leaderboard_request": "VeigaPunk @ 6.880472 (floor6) via rust npz"
+}
