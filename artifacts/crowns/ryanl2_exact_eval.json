@@ -1,0 +1,20 @@
+{
+  "source": "RyanL2/commacontrol continuous_lookup_noclip + published continuous_noclip.npz",
+  "n": 5000,
+  "data_first": "00000.csv",
+  "data_last": "04999.csv",
+  "lataccel_cost_mean": 0.030343581281987223,
+  "jerk_cost_mean": 5.363293093166279,
+  "total_cost_mean": 6.8804721572656415,
+  "floor6_lat": 0.030343,
+  "floor6_jerk": 5.363293,
+  "floor6_total": 6.880472,
+  "min_total": 3.440147514960358e-07,
+  "max_total": 218.38973349761142,
+  "wall_s": 42.108217292006884,
+  "seg0_cost": {
+    "lataccel_cost": 0.017484203261871764,
+    "jerk_cost": 4.4426903713760435,
+    "total_cost": 5.316900534469632
+  }
+}
