@@ -1,18 +1,19 @@
 # comma Controls Challenge — VeigaPunk
 
-**Leaderboard request:** please list **VeigaPunk @ 6.880** on  
-https://comma.ai/leaderboard#controls_challenge
+**Leaderboard request:** please list **VeigaPunk @ 6.880472** on  
+https://comma.ai/leaderboard#controls_challenge  
 
-| Metric | Value |
-|--------|------:|
+Display = **`floor(mean × 1e6) / 1e6`** (six decimals, never `round`).
+
+| Metric | Display (floor → 6 dp) |
+|--------|-----------------------:|
 | **total_cost** (mean, n=5000) | **6.880472** |
-| lataccel_cost mean | 0.030344 |
-| jerk_cost mean | 5.363293 |
+| lataccel_cost mean | **0.030343** |
+| jerk_cost mean | **5.363293** |
 | Method | per segment direct quadratic optimization (Tikhonov) |
-| Status | co-#1 metric floor (same class as RyanL2 / hypery11 / pmazumder3927) |
+| Status | co-#1 class vs published 6.880 crowns (3-dp LB); ask 6-dp listing |
 
-Contact: **jpveigao10@gmail.com** · GitHub **VeigaPunk** · Form + `work@comma.ai` submitted 2026-07-22.
-
+Contact: **jpveigao10@gmail.com** · GitHub **VeigaPunk** · Form + `work@comma.ai` resubmitted 2026-08-08.
 ## Reproduce
 
 ```bash

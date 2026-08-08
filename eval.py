@@ -22,6 +22,15 @@ COLORS = {
   'baseline': '#2980b9'
 }
 
+# Leaderboard / report display: six decimal places via floor(), never round().
+SCORE_DECIMALS = 6
+
+
+def floor_decimals(x, decimals=SCORE_DECIMALS):
+  """Truncate toward -inf to `decimals` places (no banker's round)."""
+  scale = 10 ** decimals
+  return np.floor(np.asarray(x, dtype=np.float64) * scale) / scale
+
 
 def img2base64(fig):
   buf = BytesIO()
@@ -63,8 +72,17 @@ def create_report(test, baseline, sample_rollouts, costs, num_segs):
     ax.set_title(f'Cost Distribution: {cost}')
     ax.legend()
   res.append(f'<img style="max-width:100%" src="data:image/png;base64,{img2base64(fig)}" alt="Plot">')
-  agg_df = res_df.groupby('controller').agg({'lataccel_cost': 'mean', 'jerk_cost': 'mean', 'total_cost': 'mean'}).round(3).reset_index()
+  agg_df = res_df.groupby('controller').agg({'lataccel_cost': 'mean', 'jerk_cost': 'mean', 'total_cost': 'mean'}).reset_index()
+  for col in ('lataccel_cost', 'jerk_cost', 'total_cost'):
+    agg_df[col] = floor_decimals(agg_df[col], SCORE_DECIMALS)
+  # fixed 6-dp strings so HTML/staff see full co-#1 resolution (floor, not round)
+  for col in ('lataccel_cost', 'jerk_cost', 'total_cost'):
+    agg_df[col] = agg_df[col].map(lambda v: f'{float(v):.{SCORE_DECIMALS}f}')
   res.append(agg_df.to_html(index=False))
+  res.append(
+    f"<p style='font-size: 16px; color: #555'>Aggregate means displayed with "
+    f"<code>floor</code> to {SCORE_DECIMALS} decimal places (not <code>round</code>).</p>"
+  )
 
   passed_baseline = agg_df[agg_df['controller'] == 'test']['total_cost'].values[0] < agg_df[agg_df['controller'] == 'baseline']['total_cost'].values[0]
   if passed_baseline:
