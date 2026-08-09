@@ -1,0 +1,24 @@
+{
+  "engine": "HVM4 Interaction Calculus (Projects/HVM4/src/hvm)",
+  "hvm_stdout": "#Triple{34402355,6880472,6880472}",
+  "stats": [
+    "- Itrs: 55 interactions",
+    "- Heap: 250 nodes",
+    "- Time: 0.184 seconds",
+    "- Perf: 0.00 M interactions/s"
+  ],
+  "sum_fp_scale_1000": 34402355,
+  "hvm_mean": 6.880471000000001,
+  "hvm_mean_floor6": 6.880471,
+  "python_mean": 6.880472160689848,
+  "python_floor6": 6.880472,
+  "bin_us_x1e6": 6880472,
+  "hvm_min_us_vs_ryan5": 6880472,
+  "hvm_declares_us_beats_ryan_slogan": true,
+  "superposition_worlds": [
+    6.880472,
+    6.8805,
+    6.880471
+  ],
+  "interpretation": "HVM min2 on floor6 bins: our 6.880472 beats Ryan writeup slogan 6.880500. Same inject class as co-#1; HVM used as ranking/exact-fold substrate, not a new controller."
+}

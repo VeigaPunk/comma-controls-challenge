@@ -1,0 +1,3 @@
+// Superpose ranking candidates; collapse with -C to enumerate worlds
+// 6880472 = our floor6, 6880500 = Ryan 6.8805 slogan, 6880471 = counterfactual
+@main = &R{ 6880472, &R{ 6880500, 6880471 } }
