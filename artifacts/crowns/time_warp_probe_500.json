@@ -1,0 +1,78 @@
+{
+  "n": 500,
+  "start": 0,
+  "end": 500,
+  "DEL_T_official": 0.1,
+  "note": "Time warps stay in R^N; official cost minimizer c* is unique. Expect no warp to beat c_star mean. lbfgs_from_warp should recover c*.",
+  "crown_ref_mean": 6.8804721572656415,
+  "crown_ref_floor6": 6.880472,
+  "methods": {
+    "c_star": {
+      "mean": 6.294410885401167,
+      "floor6": 6.29441,
+      "min": 8.004016155008032e-05,
+      "max": 76.6458288237199,
+      "beats_c_star_mean": false,
+      "beats_crown_floor6": true
+    },
+    "warp_speed_0.9": {
+      "mean": 190.8204524021214,
+      "floor6": 190.820452,
+      "min": 0.004189183020265204,
+      "max": 2900.8530252527057,
+      "beats_c_star_mean": false,
+      "beats_crown_floor6": false
+    },
+    "warp_speed_1.1": {
+      "mean": 168.45441566640093,
+      "floor6": 168.454415,
+      "min": 0.003365269698683125,
+      "max": 2325.733308379959,
+      "beats_c_star_mean": false,
+      "beats_crown_floor6": false
+    },
+    "warp_speed_0.8": {
+      "mean": 388.8658844046867,
+      "floor6": 388.865884,
+      "min": 0.011316753823132346,
+      "max": 7231.834886752889,
+      "beats_c_star_mean": false,
+      "beats_crown_floor6": false
+    },
+    "warp_speed_1.2": {
+      "mean": 338.9391414620498,
+      "floor6": 338.939141,
+      "min": 0.007593852955867271,
+      "max": 4971.488617779002,
+      "beats_c_star_mean": false,
+      "beats_crown_floor6": false
+    },
+    "warp_piecewise": {
+      "mean": 508.3055971578474,
+      "floor6": 508.305597,
+      "min": 0.015174715740820273,
+      "max": 10531.503291500327,
+      "beats_c_star_mean": false,
+      "beats_crown_floor6": false
+    },
+    "warp_opt_path": {
+      "mean": 6.294410885401167,
+      "floor6": 6.29441,
+      "min": 8.004016155008032e-05,
+      "max": 76.6458288237199,
+      "beats_c_star_mean": false,
+      "beats_crown_floor6": true
+    },
+    "lbfgs_from_warp": {
+      "mean": 6.294410885401167,
+      "floor6": 6.29441,
+      "min": 8.004016155008032e-05,
+      "max": 76.6458288237199,
+      "beats_c_star_mean": false,
+      "beats_crown_floor6": true
+    }
+  },
+  "delta_best_vs_cstar": 0.0,
+  "wall_s": 29.54330485900573,
+  "sole_number_one": true
+}
