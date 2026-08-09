@@ -1,0 +1,8 @@
+
+# Local experiment outputs (large; regenerate)
+artifacts/
+data/
+models/
+**/__pycache__/
+*.pyc
+.xbgst/
